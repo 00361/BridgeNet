@@ -1,0 +1,20 @@
+Package: BridgeNet
+Type: Package
+Title: Automated Bridge Hub Identification Between Drug Targets and Disease Core Genes
+Version: 1.0.0
+Authors@R: person("Your", "Name", email = "your.email@example.com", role = c("aut", "cre"))
+Description: BridgeNet automates bridge hub gene identification connecting
+    drug target modules and disease core gene modules.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Imports:
+    httr,
+    igraph,
+    ggplot2,
+    stats,
+    utils
+Suggests:
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
+Config/roxygen2/version: 8.1.0

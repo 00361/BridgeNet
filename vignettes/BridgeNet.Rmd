@@ -1,0 +1,22 @@
+---
+title: "BridgeNet Tutorial"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{BridgeNet Tutorial}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+## Introduction
+
+BridgeNet automates bridge hub identification between drug targets and disease core genes.
+
+## Quick start
+
+```r
+library(BridgeNet)
+targets <- read_targets("SwissTargetPrediction.csv")
+edges <- build_bridge(targets, core_genes = c("BID"))
+result <- find_bridge_hub(edges, core_genes = c("BID"))
+print(result$bridge)
+plot_bridge(result$graph, highlight = c("BID", "MCL1", "CTSS"))
